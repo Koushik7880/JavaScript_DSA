@@ -1,1 +1,33 @@
-hello
+Data Structure and Algorithm(DSA) are the heart of Software Engineering. In this series whatever i am learning about data-structure and algorithom I will try to implement it with javascript and explain it part by part how this program works.
+
+First I learned about Linear search and Binary search algorithms. These two are the most fundamantal algorithms in DSA. Today I will try to explain how this two algorithom works. Linear search and Binary search are mailny used to find specefic value from an array. Both algorithom do the same job but the working process and effeiciency is diffrent.
+
+Linear Search:
+Linear search used to find specfic value from an array, the value is start searching from 1st index to last index one by one and when it found the value it returns the specefic value and its index if its not found then it will return "value not found" 
+
+To understand my explanation, let’s look at the example below:
+
+
+----------------- pic -------------------
+
+
+
+So, what do we understand from this?
+
+In linear search, the program has to iterate through the array for n'th times. That means, if the array has 1000 items then it will iterate 1000 times, and if the array has 1 million items then it will iterate 1 million times.
+
+
+
+
+
+
+
+
+Binary Search:
+In the case of binary search, there is a condition. That is, the array or list of items must be sorted in ascending order. The goal here is not to iterate through all the items of the array from beginning to end 1 by 1. Instead, a middle index is determined and then check if the item of the middle index is greater or less than the targeted item. Then the following steps are used to find the item:
+
+If the targeted item is greater than the middle item, then the item should be on the right side of the mid. Therefore a new search is initiated on the right side of the mid.
+If the targeted item is less than the middle item, then the search is initiated on the left side of the mid.
+By repeating this method the number of searchable items is reduced in half in every iteration. And once the mid item becomes equal to the targetted item, then the search ends. This method is called divide and conquer.
+
+Let’s look at the code below, then it will be more clear to you:
