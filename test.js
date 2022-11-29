@@ -1,6 +1,7 @@
 
 
 let arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
+let arr2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
 let target = 110;
 
 function binarySearch(arr, target){
@@ -10,7 +11,7 @@ function binarySearch(arr, target){
 
     while(start <= end){
         if(arr[mid] === target){
-            return 'data found at index ' + mid;
+            return mid;
         }
         else if(arr[mid] < target){
             start = mid + 1;
@@ -22,7 +23,14 @@ function binarySearch(arr, target){
         }
     }
 
+    return -1
+
 }
 
 console.log('test');
 console.log(binarySearch(arr, target));
+console.log('test 2');
+console.log(binarySearch([-1,0,3,5,9,12], 9));
+
+console.log('test 3');
+console.log(binarySearch([-1,0,3,5,9,12], 77));

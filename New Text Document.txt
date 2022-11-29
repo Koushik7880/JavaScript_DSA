@@ -1,6 +1,6 @@
-Data Structure and Algorithm(DSA) are the heart of Software Engineering. In this series whatever i am learning about data-structure and algorithom I will try to implement it with javascript and explain it part by part how this program works.
+DataStructure&Algorithm(DSA) are the heart of Software Engineering. In this series whatever i am learning about data-structure and algorithom I tryed to implement it with javascript and explain it part by part how is executed.
 
-First I learned about Linear search and Binary search algorithms. These two are the most fundamantal algorithms in DSA. Today I will try to explain how this two algorithom works. Linear search and Binary search are mailny used to find specefic value from an array. Both algorithom do the same job but the working process and effeiciency is diffrent.
+First I have learned about Linear search(Brute Force approch) and Binary search(Divide & Conquer approch) algorithms. These two are the most fundamantal algorithms in DSA. Today I will try to explain how this two algorithom works. Linear search and Binary search are mailny used to find specefic value from an array. Both algorithom do the same job but the working process and effeiciency is diffrent.
 
 Linear Search:
 Linear search used to find specfic value from an array, the value is start searching from 1st index to last index one by one and when it found the value it returns the specefic value and its index if its not found then it will return "value not found" 
@@ -18,16 +18,22 @@ In linear search, the program has to iterate through the array for n'th times. T
 
 
 
-
+Linear & Binary Search with JavascriptDSA
 
 
 
 
 Binary Search:
-In the case of binary search, there is a condition. That is, the array or list of items must be sorted in ascending order. The goal here is not to iterate through all the items of the array from beginning to end 1 by 1. Instead, a middle index is determined and then check if the item of the middle index is greater or less than the targeted item. Then the following steps are used to find the item:
-
+Binary Search also used to search value from an array. In the case of binary search, there is a condition that is, the array or list of items must be sorted in ascending or descending order. The goal here is not to iterate through all the items of the array from beginning to end 1 by 1. Instead, a middle index is determined and then check if the item of the middle index is greater or less than the targeted item. Then the following steps are used to find the item:
+In case of a ascending binary search,
 If the targeted item is greater than the middle item, then the item should be on the right side of the mid. Therefore a new search is initiated on the right side of the mid.
 If the targeted item is less than the middle item, then the search is initiated on the left side of the mid.
-By repeating this method the number of searchable items is reduced in half in every iteration. And once the mid item becomes equal to the targetted item, then the search ends. This method is called divide and conquer.
+By repeating this method the number of searchable items is reduced in half in every iteration. And once the mid item becomes equal to the targetted item, then the search ends. This method is called divide and conquer approch.
 
 Let’s look at the code below, then it will be more clear to you:
+
+----------------- pic -------------------
+
+
+Conclusion:
+In terms of Searching Algorithms binarySearch is more usefull and effeicient then linearSearch because linearSearch algorithom iterate every item in array to search a specefic value its takes much time then binarySearch.
