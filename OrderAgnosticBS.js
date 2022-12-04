@@ -1,4 +1,4 @@
-let arr2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+let arr2 = [10, 20, 30, 40, 50, 60, 70, 80, 80, 80, 80, 80, 80, 90, 100]
 
 function binarySearch(arr, target) {
     let start = 0;
@@ -42,7 +42,8 @@ function binarySearch(arr, target) {
     return 'Data not found'
 
 }
-console.log(binarySearch([30, 25, 20, 15, 10], 25));
+console.log(binarySearch([90,80,70,60,50,40,30,20,10], 30));
+console.log(binarySearch([10,20,30,40,50,60,70,80,90], 30));
 console.log(binarySearch(arr2, 80));
 
 

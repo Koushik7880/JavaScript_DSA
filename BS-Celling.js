@@ -38,6 +38,8 @@ function FlooringAndCling(arr, target) {
   return obj
 }
 
-const output = FlooringAndCling(ss, 9) // {floring: 8, cling: 9}
-const output1 = FlooringAndCling(ss, 2) //{flooring: 1, cling: 2}
-console.log(output)
+const output = FlooringAndCling(ss, 9); // {floring: 8, cling: 9}
+const output1 = FlooringAndCling(ss, 2); //{flooring: 1, cling: 2}
+console.log('test');
+console.log(FlooringAndCling(ss, 9));
+console.log(FlooringAndCling(ss, 2));
