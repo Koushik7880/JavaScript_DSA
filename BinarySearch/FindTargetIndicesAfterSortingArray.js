@@ -2,7 +2,6 @@ function targetIndices(nums, target) {
   nums.sort(function(a, b) {
   return a - b;
 });
-
   let start = 0;
   let end = nums.length - 1;
   let mid;
@@ -26,6 +25,7 @@ function targetIndices(nums, target) {
                                   count.push(i);
                           }
                   }
+                //   return count.sort();
                   return count.sort();
           }
           //Update Star and End Point for control loop:
@@ -38,8 +38,7 @@ function targetIndices(nums, target) {
   }
   return [];
 }
-
-console.log(targetIndices([100,100,100,100,100,100,100,,100,100,100],100));
+console.log(targetIndices([100,100,100,100,100,100,100,,100,100,100,100,100],100));
 // console.log(targetIndices([1,2,5,2,3],2));
 // console.log(targetIndices([1,2,5,2,3],3));
 // console.log(targetIndices([1,2,5,2,3],5));
