@@ -1,3 +1,30 @@
+// Working Code
+
+function targetIndices(nums, target)
+{
+	let count_less = 0;
+	let count_target = 0;
+
+	// Loop to count smaller elements and val
+	for (let i = 0; i < nums.length; i++) {
+		if (nums[i] == target)
+			count_target++;
+		if (nums[i] < target)
+			count_less++;
+	}
+
+	// List to store indices
+	let ans = [];
+	while (count_target--) {
+		ans.push(count_less++);
+	}
+	return ans;
+}
+
+
+// Working Code
+
+
 // function targetIndices(nums, target) {
 //     nums.sort(function(a, b) {
 //     return a - b;
@@ -48,16 +75,16 @@
 
 // Function to find indices
 // of val in array after sorting
-function targetIndices(nums, val)
+function targetIndices(nums, target)
 {
 	let count_less = 0;
 	let count_target = 0;
 
 	// Loop to count smaller elements and val
 	for (let i = 0; i < nums.length; i++) {
-		if (nums[i] == val)
+		if (nums[i] == target)
 			count_target++;
-		if (nums[i] < val)
+		if (nums[i] < target)
 			count_less++;
 	}
 
@@ -71,8 +98,8 @@ function targetIndices(nums, val)
 
 // Driver code
 let nums = [ 1, 2, 5, 2, 3 ];
-let val = 2;
-let ans = targetIndices(nums, val);
+let target = 2;
+let ans = targetIndices(nums, target);
 
 	// Loop to print indices
 	for (let i = 0; i < ans.length; i++) {
