@@ -1,0 +1,41 @@
+এখন, Time complexity count করা হয় কিভাবে?
+
+মুলত দুইটা operation এর উপর Time complexity count করা হয় —
+
+Assignment —
+কোনো ভ্যারিয়েবলে ভ্যালু assign করলে Time Complexity count করা হয়। যেমন, var a = 10, var b = 20, var c = a+b. এখানে তিনটা ভ্যারিয়েবলে তিনটা ভ্যালু store করা হয়েছে। এরকম প্রত্যেক Assignment এ Time Complexity calculate করা হবে।
+
+2. Arithmatic Operation —
+
+Program এ কোনো arithmatic operation (যোগ, বিয়োগ, গুণ, ভাগ) হলে তখন TC calculate করা হয়। উপরে var c = a+b, তে arithmatic operation চলবে, এই সময় TC calculate করা হবে।
+
+এই দুটো অপারেশন কতবার একটা program এ হইছে সেটা count করা হয়।
+
+Understanding Time and Space Complexity.
+
+Time Complexity:(!Time Complexity=Execution of Time)
+There is a wrong thinking about the time Complexity that is the total time of an program executaton time is the Time Complexity of that program, but the real scenerio is diffrent. Now a days super computers are available they can easily run big programs in just few miliseconds which local computers can take hours, so this executaton time is actually depending on the computers configaration.
+So what is the time complexity then   
+
+Time Complexity - "In a Program how many time a single statement will run" it means its Time Complexity. 
+
+Suppose, in one of our program we have one loop, so its time complexity will be calculated based on how many times this loop has executed not how many time this code take for executaton.
+
+//////////////////////////////////////
+
+
+for(let i = 0; i < 10; i++){
+    console.log(i);
+}
+
+
+////////////////////////////////////
+
+Now how a time complexity actually calculate?
+
+Mainly based on two operations we can caltulate the time complexity. First one is Arithmatic Operation and the other is Arithmatic Operation.
+
+1. Assignment — When we assign any value to a variable time complexity count. suppose var a = 10, var b = 20, var c = a+b. Here in three variables three data has been stored. Like here in every assignment time complexity will calculate. 
+
+2. Arithmatic Operation — In a program if any arithmatic operation occure like (+, -, *, /)
+
