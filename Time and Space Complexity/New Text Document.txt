@@ -37,5 +37,5 @@ Mainly based on two operations we can caltulate the time complexity. First one i
 
 1. Assignment — When we assign any value to a variable time complexity count. suppose var a = 10, var b = 20, var c = a+b. Here in three variables three data has been stored. Like here in every assignment time complexity will calculate. 
 
-2. Arithmatic Operation — In a program if any arithmatic operation occure like (+, -, *, /)
+2. Arithmatic Operation — In a program if any arithmatic operation occure like (+, -, *, /) then TC calculation comes into play, for example c = a+b.
 
