@@ -1,15 +1,4 @@
-এখন, Time complexity count করা হয় কিভাবে?
 
-মুলত দুইটা operation এর উপর Time complexity count করা হয় —
-
-Assignment —
-কোনো ভ্যারিয়েবলে ভ্যালু assign করলে Time Complexity count করা হয়। যেমন, var a = 10, var b = 20, var c = a+b. এখানে তিনটা ভ্যারিয়েবলে তিনটা ভ্যালু store করা হয়েছে। এরকম প্রত্যেক Assignment এ Time Complexity calculate করা হবে।
-
-2. Arithmatic Operation —
-
-Program এ কোনো arithmatic operation (যোগ, বিয়োগ, গুণ, ভাগ) হলে তখন TC calculate করা হয়। উপরে var c = a+b, তে arithmatic operation চলবে, এই সময় TC calculate করা হবে।
-
-এই দুটো অপারেশন কতবার একটা program এ হইছে সেটা count করা হয়।
 
 Understanding Time and Space Complexity.
 
@@ -39,5 +28,98 @@ Mainly based on two operations we can caltulate the time complexity. First one i
 
 2. Arithmatic Operation — In a program if any arithmatic operation occure like (+, -, *, /) then TC calculation comes into play, for example c = a+b here one arithmatic operation occure and this TC calculate.
 
-this
+How many times this two options(Assignment, Arithmatic) execute is count on to calculate TC.
+
+During Time complexity calculation some value or process need to avoid because these don't have any impact on TC calculation graph —
+
+Lets understand this with clear example:
+
+1. Constant value must avoid. (explained it in bellow eith example)
+
+2. No need to count the auxiliary code for example console.log(). console.log is only used to print or display code. Function invocation also not need to count.
+
+
+
+
+Time Complexity counting with Examples:-
+
+Time complexity calculate with 3 diffrent Asymptotic Notation. These are: 
+
+1.Big-O Notation (O-notation)
+— It provides the worst-case complexity of the algorithm.
+
+2.Omega Notation (Ω-notation) —
+— It provides the best-case complexity of an algorithm.
+
+3.Theta Notation (Θ-notation)
+— It provides the average-case complexity of an algorithm.
+
+
+In softwar deveopment maximum time we use Big-O Notation (O-notation) to calculate the worst-case complexity of an algorithm.
+
+
+////////////////////////////////////
+
+
+var a = 10; 
+var b = 20;
+var c = a+b;
+
+
+////////////////////////////////////
+
+Now avobe we can see 3 variable assignment. We consider each assignment as O(1), according to that we have -
+
+
+var a = 10 consider as — O(1),
+
+var b = 20 consider as — O(1),
+
+var c = a+b consider as — O(1)
+
+so,
+
+O(1) + O(1) + O(1)
+
+= O(3) (We can consider it as O(3 *1) )
+
+= O(1) (explanation: As here has 3 constant so during Time Complexity calculation every Constant consider as 1.
+
+So for avobe Program Time Complexity will be — O(1) Or, Big O(1).
+
+Here, if O(1000) also then we consider it as O(1) , because Constant heve to consider as (1).
+
+
+////////////////////////////////////
+
+Example: 1
+
+= O(100 * n)
+= O(1 * n)
+= O(n)
+
+////////////////////////////////////
+
+
+In avobe first example 100 is considered as 1 because 100 is constant value. Here 100 value equivalant to 100 and "n" is a variable(চলক), the value of "n"
+is changeable here. This variable value can be anything so, during the Time Complexity calculation need to avoid constant value.
+
+
+ধরি আমাদের এমন একটা program আছে যার Time Complexity O(2n), যেটাকে আমরা Order of n বা O(n) লিখতে পারি। এখন O(n) 
+এর জন্য একটা গ্রাফ নিচে দেয়া হল। যেখানে —
+
+Why its so important to avoid Constant value?
+Suppose in one of our program the Time Complexity O(2n), so we can write it Order of n OR O(n). Now for O(n) one graph has given bellow
+
+////////////////////////////////////
+Graph-1
+////////////////////////////////////
+
+এখানে, X axis এ আমরা ডাটা বা n কে দেখাচ্ছি, আর Y axis বরাবর লুপের সংখ্যা দেখাচ্ছি। ধরি আমরা একটা for লুপ চালাচ্ছি যেখানে n এর মান যত হবে লুপ ও ততবার চলবে। গ্রাফ অনুযায়ী — n এর মান 1 হলে লুপ চলবে 1 , n এর মান ২ হলে লুপ চলবে ২ বার, n এর মান ৩ হলে লুপ চলবে ৩ বার। এভাবে n এর মান ৯ হলে লুপটা চলবে ৯ বার।
+
+তাহলে, এখান থেকে আমরা উর্ধ্মুখী যেই লাইনটা পাচ্ছি সেটাকে বলা হয় Linear Time Complexity.
+
+এখন O(2n) এর জন্য ২ নাম্বার গ্রাফ টা দেখি —
+
+Here, in X axis we show Data or N, and in Y axis showing the number of loop. Suppose we execute a for loop where value of n  
 
