@@ -1,9 +1,21 @@
-এখন, Time complexity count করা হয় কিভাবে?
+Time complexity calculate করার সময় কিছু জিনিস বাদ দেয়া হয় —
 
-মুলত দুইটা operation এর উপর Time complexity count করা হয় —
+Constant গুলোকে বাদ দেয়া হয়। (নিচে উদাহরন সহ বুঝিয়ে দেয়া হয়েছে)
+2. Auxiliary বা সহায়ক Code গুলোকে কাউণ্ট করা হয়না। যেমন — Console.log() কে কাউণ্ট করা হয়না কারণ এটা শুধু প্রিন্ট বা ডিসপ্লে করতে ব্যবহৃত হয়। Function call কেও count করা হয় না।
 
-Assignment —
-কোনো ভ্যারিয়েবলে ভ্যালু assign করলে Time Complexity count করা হয়। যেমন, var a = 10, var b = 20, var c = a+b. এখানে তিনটা ভ্যারিয়েবলে তিনটা ভ্যালু store করা হয়েছে। এরকম প্রত্যেক Assignment এ Time Complexity calculate করা হবে।
+Time Complexity counting with Examples:-
+Time complexity প্রকাশ করা হয় মুলত ৩ টা Asymptotic Notation এর মাধ্যমে। এগুলো হলঃ
+
+Big-O Notation (O-notation)
+— It provides the worst-case complexity of the algorithm.
+
+Omega Notation (Ω-notation) —
+— It provides the best-case complexity of an algorithm.
+
+Theta Notation (Θ-notation)
+— It provides the average-case complexity of an algorithm.
+
+উপরের Notation গুলোর মধ্যে থেকে আমরা Big-O Notation (O-notation) দিয়েই worst-case Complexity calculate করবো।
 
 2. Arithmatic Operation —
 
@@ -39,5 +51,4 @@ Mainly based on two operations we can caltulate the time complexity. First one i
 
 2. Arithmatic Operation — In a program if any arithmatic operation occure like (+, -, *, /) then TC calculation comes into play, for example c = a+b here one arithmatic operation occure and this TC calculate.
 
-this
 
