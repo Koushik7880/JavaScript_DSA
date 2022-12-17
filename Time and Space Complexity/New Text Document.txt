@@ -113,11 +113,4 @@ Suppose in one of our program the Time Complexity O(2n), so we can write it Orde
 Graph-1
 ////////////////////////////////////
 
-এখানে, X axis এ আমরা ডাটা বা n কে দেখাচ্ছি, আর Y axis বরাবর লুপের সংখ্যা দেখাচ্ছি। ধরি আমরা একটা for লুপ চালাচ্ছি যেখানে n এর মান যত হবে লুপ ও ততবার চলবে। গ্রাফ অনুযায়ী — n এর মান 1 হলে লুপ চলবে 1 , n এর মান ২ হলে লুপ চলবে ২ বার, n এর মান ৩ হলে লুপ চলবে ৩ বার। এভাবে n এর মান ৯ হলে লুপটা চলবে ৯ বার।
-
-তাহলে, এখান থেকে আমরা উর্ধ্মুখী যেই লাইনটা পাচ্ছি সেটাকে বলা হয় Linear Time Complexity.
-
-এখন O(2n) এর জন্য ২ নাম্বার গ্রাফ টা দেখি —
-
-Here, in X axis we show Data or N, and in Y axis showing the number of loop. Suppose we execute a for loop where value of n  
-
+ 
