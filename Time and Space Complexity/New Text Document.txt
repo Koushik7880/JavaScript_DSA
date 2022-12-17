@@ -226,12 +226,11 @@ while(){
 ////////////////////////////////////\
 
 
-
-উপরের উদাহরণে — একটা নেস্টেড লুপের মধ্যে দুইটা লুপ এবং এটার বাইরে আরেকটা লুপ আছে। এই প্রোগ্রামের Time Complexity —
-In upwords program we can see that there is 
+In upwords program we can see that there is two loop in a nested loop and one seperate loop outside of this nested loop. So here the time complexity will be - 
 
 = O(n²) + O(n)
 
 = O(n²)
 
+If we notice upwords T.C we can see that we avoid the value of the last loop  
 উপরের T.C তে লক্ষ্য করলে দেখা যাবে আমরা পরের লুপের value টা বাদ দিয়েছি, কারণ — একট প্রোগ্রামে ছোট এবং বড় দুটো value থাকলে আমরা বড় টা রেখে ছোট টা বাদ দিতে পারি। এটি Time Complexity নির্নয়ের একটি নিয়ম। df
