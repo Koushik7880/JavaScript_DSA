@@ -103,9 +103,6 @@ In avobe first example 100 is considered as 1 because 100 is constant value. Her
 is changeable here. This variable value can be anything so, during the Time Complexity calculation need to avoid constant value.
 
 
-ধরি আমাদের এমন একটা program আছে যার Time Complexity O(2n), যেটাকে আমরা Order of n বা O(n) লিখতে পারি। এখন O(n) 
-এর জন্য একটা গ্রাফ নিচে দেয়া হল। যেখানে —
-
 Why its so important to avoid Constant value?
 Suppose in one of our program the Time Complexity O(2n), so we can write it Order of n OR O(n). Now for O(n) one graph has given bellow
 
@@ -113,11 +110,128 @@ Suppose in one of our program the Time Complexity O(2n), so we can write it Orde
 Graph-1
 ////////////////////////////////////
 
-এখানে, X axis এ আমরা ডাটা বা n কে দেখাচ্ছি, আর Y axis বরাবর লুপের সংখ্যা দেখাচ্ছি। ধরি আমরা একটা for লুপ চালাচ্ছি যেখানে n এর মান যত হবে লুপ ও ততবার চলবে। গ্রাফ অনুযায়ী — n এর মান 1 হলে লুপ চলবে 1 , n এর মান ২ হলে লুপ চলবে ২ বার, n এর মান ৩ হলে লুপ চলবে ৩ বার। এভাবে n এর মান ৯ হলে লুপটা চলবে ৯ বার।
 
-তাহলে, এখান থেকে আমরা উর্ধ্মুখী যেই লাইনটা পাচ্ছি সেটাকে বলা হয় Linear Time Complexity.
+Here, in X axis we show Data OR N, and in Y axis showing the number of loop. Suppose we execute a for loop where value of n is equal to the total number of loop executaton. According to the graph if n = 1 then the loop will execute one time, if n = 2 loop will execute 2 times, if n = 3 loop will execute 3 times, like that if n = 9 loop will execute 9 times.
 
-এখন O(2n) এর জন্য ২ নাম্বার গ্রাফ টা দেখি —
+Here in the graph we see an upwords(উর্ধ্মুখী) line which is called Linear Time Complexity.
 
-Here, in X axis we show Data or N, and in Y axis showing the number of loop. Suppose we execute a for loop where value of n  
+Now for O(2n) lets see the 2nd graph -
 
+////////////////////////////////////
+Graph-2
+////////////////////////////////////
+
+Here, also in X axis we show Data OR N, and in Y axis showing the number of loop. Suppose we execute a for loop where number of loop executaton will doubel then value of n. According to the graph if n = 1 then the loop will execute 2 time, if n = 2 loop will execute 4 times, if n = 3 loop will execute 6 times, like that if n = 6 loop will execute 12 times.
+
+Here also in the graph we see an upwords(উর্ধ্মুখী) line moving ahead linearly which is also called Linear Time Complexity.
+
+Only for this reason we avoid constant value, its not depend on the size of that constant value. Constant value doesnot have any effect on graph, thats why no need to count the constant value and we avoid it. So O(2n), O(100n) all are same in both case we write O(n) as Time Complexity.  
+
+Examples:
+////////////////////////////////////
+let arr = [1,2,3,4,5]
+let target = 1
+
+for(let i = 0; i <= arr.length; i++){
+    if (arr[i] === target) {
+        console.log(arr[i]);
+    }
+}
+////////////////////////////////////
+
+Suppose we have an Array and a Target value, for this program Time Complexity will be O(n). Because -
+
+This loop will execute 5 time, because here value is equal to the total number of loop executaton. That's why value is denoted by n, here 'n'(চলক) is changeable, n can be increase or decrease its not constant at all.
+
+After first loop executaton we get our target than why TC will be O(n)? 
+
+After one time loop executaton if target data found than it will be best-case complexity of an algorithm, it called Omega Notation also. And if target value found in middle or of target = 3 than it will be average-case complexity of an algorithm OR Theta Notation (Θ-notation).
+
+As we will calculate worst-case complexity so, the time complexity for upper program will be
+O(n). So how many time the loop execute it will depend on the value of n.
+
+
+
+Example 2 :
+////////////////////////////////////
+for(let i = 0; i <= arr.length; i++){
+    
+        console.log(i);
+    
+}
+
+while (true) {
+    
+}
+////////////////////////////////////\
+
+Now suppose here in this program two loop execute one after another. So for 1st loop time complexity will be O(n) and for 2nd loop ime complexity will be O(n),
+
+then O(n) + O(n) = O(2n) OR O(n)। Here 2 constant, so must 2 avoid.
+
+Example 3:
+////////////////////////////////////\
+for (let i = 0; i <= arr.length; i++) {
+  for (let j = 0; j < arr.length; j++) {
+    
+  }
+}
+
+////////////////////////////////////\
+
+Suppose here we have 2 nested loop so, for 1st loop TC will be O(n) and for 2nd Time Complexity will be O(n), so O(n) * O(n) = O(n²). As because its a nested loop so here multiplation need.
+
+
+
+If number of nested loop is 3 then-
+
+= O(n) * O(n) * O(n)
+
+= O(n*n*n)
+
+= O(n³)
+
+Note:
+1. For two Nested Loop if input value is ‘n’ and ‘m’ then Time Complexity will be -
+
+= O(n*m)
+
+=O(nm)
+
+2. For three Nested Loop if input value is ’a’ , ‘b’ and ‘c’ then Time Complexity will be -
+
+= O(a*b*c)
+
+= O(abc)
+
+3. For three Nested Loop if input value is ’a’ , ‘b’ and ‘a’ then Time Complexity will be - 
+
+= O(a*b*a)
+
+= O(a²b)
+
+Example 5:
+////////////////////////////////////\
+
+for (let i = 0; i <= arr.length; i++) {
+  for (let j = 0; j < arr.length; j++) {
+    
+  }
+}
+
+while(){
+
+}
+
+////////////////////////////////////\
+
+
+
+উপরের উদাহরণে — একটা নেস্টেড লুপের মধ্যে দুইটা লুপ এবং এটার বাইরে আরেকটা লুপ আছে। এই প্রোগ্রামের Time Complexity —
+In upwords program we can see that there is 
+
+= O(n²) + O(n)
+
+= O(n²)
+
+উপরের T.C তে লক্ষ্য করলে দেখা যাবে আমরা পরের লুপের value টা বাদ দিয়েছি, কারণ — একট প্রোগ্রামে ছোট এবং বড় দুটো value থাকলে আমরা বড় টা রেখে ছোট টা বাদ দিতে পারি। এটি Time Complexity নির্নয়ের একটি নিয়ম।
