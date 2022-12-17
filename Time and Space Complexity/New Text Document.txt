@@ -103,9 +103,6 @@ In avobe first example 100 is considered as 1 because 100 is constant value. Her
 is changeable here. This variable value can be anything so, during the Time Complexity calculation need to avoid constant value.
 
 
-ধরি আমাদের এমন একটা program আছে যার Time Complexity O(2n), যেটাকে আমরা Order of n বা O(n) লিখতে পারি। এখন O(n) 
-এর জন্য একটা গ্রাফ নিচে দেয়া হল। যেখানে —
-
 Why its so important to avoid Constant value?
 Suppose in one of our program the Time Complexity O(2n), so we can write it Order of n OR O(n). Now for O(n) one graph has given bellow
 
@@ -113,4 +110,156 @@ Suppose in one of our program the Time Complexity O(2n), so we can write it Orde
 Graph-1
 ////////////////////////////////////
 
- 
+
+
+Here, in X axis we show Data OR N, and in Y axis showing the number of loop. Suppose we execute a for loop where value of n is equal to the total number of loop executaton. According to the graph if n = 1 then the loop will execute one time, if n = 2 loop will execute 2 times, if n = 3 loop will execute 3 times, like that if n = 9 loop will execute 9 times.
+
+Here in the graph we see an upwords(উর্ধ্মুখী) line which is called Linear Time Complexity.
+
+Now for O(2n) lets see the 2nd graph -
+
+////////////////////////////////////
+Graph-2
+////////////////////////////////////
+
+Here, also in X axis we show Data OR N, and in Y axis showing the number of loop. Suppose we execute a for loop where number of loop executaton will doubel then value of n. According to the graph if n = 1 then the loop will execute 2 time, if n = 2 loop will execute 4 times, if n = 3 loop will execute 6 times, like that if n = 6 loop will execute 12 times.
+
+Here also in the graph we see an upwords(উর্ধ্মুখী) line moving ahead linearly which is also called Linear Time Complexity.
+
+Only for this reason we avoid constant value, its not depend on the size of that constant value. Constant value doesnot have any effect on graph, thats why no need to count the constant value and we avoid it. So O(2n), O(100n) all are same in both case we write O(n) as Time Complexity.  
+
+Examples:
+////////////////////////////////////
+let arr = [1,2,3,4,5]
+let target = 1
+
+for(let i = 0; i <= arr.length; i++){
+    if (arr[i] === target) {
+        console.log(arr[i]);
+    }
+}
+////////////////////////////////////
+
+Suppose we have an Array and a Target value, for this program Time Complexity will be O(n). Because -
+
+This loop will execute 5 time, because here value is equal to the total number of loop executaton. That's why value is denoted by n, here 'n'(চলক) is changeable, n can be increase or decrease its not constant at all.
+
+After first loop executaton we get our target than why TC will be O(n)? 
+
+After one time loop executaton if target data found than it will be best-case complexity of an algorithm, it called Omega Notation also. And if target value found in middle or of target = 3 than it will be average-case complexity of an algorithm OR Theta Notation (Θ-notation).
+
+As we will calculate worst-case complexity so, the time complexity for upper program will be
+O(n). So how many time the loop execute it will depend on the value of n.
+
+
+
+Example 2 :
+////////////////////////////////////
+for(let i = 0; i <= arr.length; i++){
+    
+        console.log(i);
+    
+}
+
+while (true) {
+    
+}
+////////////////////////////////////\
+
+Now suppose here in this program two loop execute one after another. So for 1st loop time complexity will be O(n) and for 2nd loop ime complexity will be O(n),
+
+then O(n) + O(n) = O(2n) OR O(n)। Here 2 constant, so must 2 avoid.
+
+Example 3:
+////////////////////////////////////\
+for (let i = 0; i <= arr.length; i++) {
+  for (let j = 0; j < arr.length; j++) {
+    
+  }
+}
+
+////////////////////////////////////\
+
+Suppose here we have 2 nested loop so, for 1st loop TC will be O(n) and for 2nd Time Complexity will be O(n), so O(n) * O(n) = O(n²). As because its a nested loop so here multiplation need.
+
+
+
+If number of nested loop is 3 then-
+
+= O(n) * O(n) * O(n)
+
+= O(n*n*n)
+
+= O(n³)
+
+Note:
+1. For two Nested Loop if input value is ‘n’ and ‘m’ then Time Complexity will be -
+
+= O(n*m)
+
+=O(nm)
+
+2. For three Nested Loop if input value is ’a’ , ‘b’ and ‘c’ then Time Complexity will be -
+
+= O(a*b*c)
+
+= O(abc)
+
+3. For three Nested Loop if input value is ’a’ , ‘b’ and ‘a’ then Time Complexity will be - 
+
+= O(a*b*a)
+
+= O(a²b)
+
+Example 5:
+////////////////////////////////////\
+
+for (let i = 0; i <= arr.length; i++) {
+  for (let j = 0; j < arr.length; j++) {
+    
+  }
+}
+
+while(){
+
+}
+
+////////////////////////////////////\
+
+
+In upwords program we can see that there is two loop in a nested loop and one seperate loop outside of this nested loop. So here the time complexity will be - 
+
+= O(n²) + O(n)
+
+= O(n²)
+
+If we notice upwords T.C we can see that we avoid the value of the last loop.
+
+From uppar T.C we can see we avoided the last loop value because, in a program between two program we only consider the bigger value. Its a basic rules of T.C  
+
+Example 6:
+= O(n² + n)
+
+= O(n²) (Avoid the small value)
+
+Example 7:
+= O(5n⁴ + 10n³ + n² + 2n + 100)
+
+= O(n⁴+ n³ + n² + n ) — — — →[avoid constant]
+
+= O(n⁴) — — — →[avoid small value]
+
+
+Calculating Time Complexity in Binary Search:
+Binary Search Time Complexity is O(logn). In binary search its doesn't matter how much big data set or array is given to the program, every time after a loop execution the array devided into half in this way number of loop executaton redused in massive number. Suppose in 100 coror data if we apply binary search
+only 27-28 loop executaton need to masure the worst time complexity. 
+
+Example:- 
+
+100cr --> 50cr --> 25cr --> 12cr --> 6cr --> 3cr --> 1cr -->
+50lakh --> 25lakh --> 12lakh --> 6lakh --> 3lakh --> 1lakh -->
+50k --> 25k --> 12k --> 6k --> 3k --> 1k --> 500 --> 250 -->
+120 --> 60 --> 30 --> 15 --> 7 --> 3 --> 1
+
+১০০ কোটি থেকে অর্ধেক হয়ে ৫০ কোটি তারপর অর্ধেক হয়ে ২৫ কোটি এভাবে শেহ পর্যন্ত ১ এ চলে আসে । এখানে টোটাল লুপ.২৮ বা ৩০ টা হতে পারে। তাই বলা হয় লগারিদম ভাবে করা প্রোগ্রামের টাইম কমপ্লেক্সিটি সবথেকে বেস্ট। বাইনারি সার্চে n হারে Time Complexity reduce হয়।
+
