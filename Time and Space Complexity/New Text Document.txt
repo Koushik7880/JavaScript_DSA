@@ -261,5 +261,6 @@ Example:-
 50k --> 25k --> 12k --> 6k --> 3k --> 1k --> 500 --> 250 -->
 120 --> 60 --> 30 --> 15 --> 7 --> 3 --> 1
 
-১০০ কোটি থেকে অর্ধেক হয়ে ৫০ কোটি তারপর অর্ধেক হয়ে ২৫ কোটি এভাবে শেহ পর্যন্ত ১ এ চলে আসে । এখানে টোটাল লুপ.২৮ বা ৩০ টা হতে পারে। তাই বলা হয় লগারিদম ভাবে করা প্রোগ্রামের টাইম কমপ্লেক্সিটি সবথেকে বেস্ট। বাইনারি সার্চে n হারে Time Complexity reduce হয়।
+From 100 coror devided into 50 coror then devided into 25 coror like that it comes to 1. Here total loop will be 28-30 only. Thats why its said that logarithom used program T.C is best then others. Binary Search
+reduce Time Complexity in 'n' rate.
 
