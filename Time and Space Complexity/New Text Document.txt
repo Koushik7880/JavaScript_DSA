@@ -216,12 +216,9 @@ Example 5:
 
 for (let i = 0; i <= arr.length; i++) {
   for (let j = 0; j < arr.length; j++) {
-    
   }
 }
-
 while(){
-
 }
 
 ////////////////////////////////////\
@@ -264,3 +261,111 @@ Example:-
 From 100 coror devided into 50 coror then devided into 25 coror like that it comes to 1. Here total loop will be 28-30 only. Thats why its said that logarithom used program T.C is best then others. Binary Search
 reduce Time Complexity in 'n' rate.
 
+
+Space Complexity.
+To execute a program how much space is required is called space complexity. In this stage of Space Complexity we will analysis worst space complexity.
+It could be either O(1) or O(n).
+
+
+////////////////////////////////////
+var a = 10
+var b = 20
+var c = a+b
+////////////////////////////////////
+In upper example 3 variable has taken, for each variable Space Complexity will be - 
+
+O(1) + O(1) + O(1)
+
+= O(3)
+
+= O(1)
+
+As here we can see 3 constant value so 3 need to avoid, so this programs time complexity will be Order of 1 OR O(1).
+
+////////////////////////////////////
+ array = [10,20,30,40,50,60]
+ ////////////////////////////////////
+
+Here the Space Complexity of this array will be O(n), because in a program the space depends on the amount or size of value in array. Suppose for value 10 space will be 10, for 20 space will be 20. Like this way for every data one spach alocate, that why its space complexity will be O(n). Here n = length of the array. The array of length and how much space it will take it depends on value of 'n'. 
+
+
+ 
+//////////////////////////////////
+let n = [10,20,30,40,50,60]
+while(){
+if(){
+will check condition here
+}
+}
+/////////////////////////////
+Suppose we have an Array, in this array we will execute loop & check conditions, so what will be its Space Complexitry?
+
+It will be O(n) because, here space will allocate for array length. So Space Complexitry will be Order of n OR O(n).
+
+
+What is Space Complexity of Binary Search?
+
+Suppose for Binary Search there is a given array, we have to execute the operation. So for Binary Search Space Complexitry will be O(1). Let me explain with some code:
+
+
+/////////////////////////////
+
+/////////////////////////////
+
+
+In the upper function has an array. Here we have to find the target by applying Binary Search -
+
+
+/////////////////////////////
+let start = 0,
+let end = arr.length - 1
+let mid;
+/////////////////////////////
+
+
+Here we have 3 variables. So, here Space Complexity will be -
+
+O(1) + O(1) + O(1)
+
+= O(3) বা O(3*1)
+
+=O(1)
+
+Here only these variable declared no other executaton occure. Array has already been giveb, thats why in Binary Search Space Complexity is O(1).
+And Time Complexitry O(logn).  
+
+
+Space Complexity of Nested Array:
+[
+ [1,2,3,4],
+ [5,6,7,8],
+ [9,0,1,2],
+ [3,4,5,6],
+]
+Suppose we have a Parent Array and inside it more 3 array exist. This type of Nested Array called matrix. So what will be the space complexity of this type of array?
+
+If we calculate in general for Parent Array will be O(n), and for 4 others more 4 O(n).
+
+
+= O(n) * (O(n) + O(n) + O(n) +O(n) )
+
+= O(n) * O(4n) →[4 constant so avoid it]
+
+= O(n) * O(n)
+
+= O(n²)
+
+As its a matrix so its neet to consider as Row and Column. so -
+
+
+[
+ [1,2,3,4],
+ [5,6,7,8],
+ [9,0,1,2],
+ [3,4,5,6],
+]
+4 Row = O(n), 4 Column = O(n);
+
+so, = O(n) * O(n)
+
+= O(n²)
